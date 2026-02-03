@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title> | Tekin Esports</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+ 
+<body>
+
+    <div id="logo-transition">
+  <img src="img/logo-tekin.png" alt="Tekin Esports">
+</div>
+
+
+<header class="navbar">
+  <div class="brand">
+    <img src="img/logo-tekin.png">
+    <img src="img/letra-tekin.png" class="text-logo">
+  </div>
+
+  <nav class="menu">
+    <a href="index.html">Inicio</a>
+    <a href="quienessomos.html">QUIÉNES SOMOS</a>
+    <a href="roster.html">Roster</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</header>
+<section class="valorant-hero">
+  <div class="valorant-overlay">
+    <h1 class="page-title">VALORANT</h1>
+    <p>Equipo competitivo oficial de Tekin Esports</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<div class="roster-grid">
+
+  <div class="player-box">
+    <img src="img/astra.png" alt="Rusaku - Astra">
+    <p class="role">CONTROLLER</p>
+    <h3>Rusaku</h3>
+    <span class="country">🇨🇱 Chile</span>
+  </div>
+
+  <div class="player-box">
+    <img src="img/yoru.png" alt="Nvnzin1 - Yoru">
+    <p class="role">FLEX</p>
+    <h3>Nvnzin1</h3>
+    <span class="country">🇨🇱 Chile</span>
+  </div>
+
+  <div class="player-box">
+    <img src="img/sova.png" alt="Wahe - Sova">
+    <p class="role">INICIADOR</p>
+    <h3>Wahe</h3>
+    <span class="country">🇦🇷 Argentina</span>
+  </div>
+
+  <div class="player-box">
+    <img src="img/jett.png" alt="Mrtz - Jett">
+    <p class="role">DUELISTA</p>
+    <h3>Mrtz</h3>
+    <span class="country">🇨🇱 Chile</span>
+  </div>
+
+  <div class="player-box">
+    <img src="img/cypher.png" alt="Carlinho - Cypher">
+    <p class="role">CENTINELA</p>
+    <h3>Carlinho</h3>
+    <span class="country">🇨🇱 Chile</span>
+  </div>
+
+</div>
+
+
+</div>
+
+
+
+<footer class="footer">
+  © Tekin Esports | #GoTekin
+</footer>
+
+
+
+
+<script>
+  const transition = document.getElementById("logo-transition");
+  const links = document.querySelectorAll("a");
+
+  links.forEach(link => {
+    link.addEventListener("click", e => {
+      const href = link.getAttribute("href");
+
+      if (href && !href.startsWith("#")) {
+        e.preventDefault();
+        transition.classList.add("active");
+
+        setTimeout(() => {
+          window.location.href = href;
+        }, 600);
+      }
+    });
+  });
+</script>
+
+
+
+
+</body>

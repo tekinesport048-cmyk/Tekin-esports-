@@ -1,0 +1,110 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tekin Esports</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+  <div id="logo-transition">
+  <img src="img/logo-tekin.png" alt="Tekin Esports">
+</div>
+
+
+<header class="navbar">
+
+
+  <div class="brand">
+    <img src="img/logo-tekin.png">
+    <img src="img/letra-tekin.png" class="text-logo">
+  </div>
+  <nav class="menu">
+    <a href="index.html">Inicio</a>
+    <a href="quienessomos.html">QUIÉNES SOMOS</a>
+    <a href="roster.html">Roster</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</header>
+
+
+
+
+<section class="home-hero">
+  <div class="home-overlay">
+    <img src="img/logo-tekin.png" class="home-logo" alt="Tekin Esports">
+    <h1>TEKIN ESPORTS</h1>
+    <p>Organización competitiva de VALORANT</p>
+
+
+   <div class="home-buttons">
+      <a href="valorant.html" class="btn-main">VALORANT</a>
+      <a href="contacto.html" class="btn-secondary">CONTACTO</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="home-info">
+
+  <div class="info-box">
+    <h3>🎮 Juego</h3>
+    <p>VALORANT</p>
+  </div>
+
+  <div class="info-box">
+    <h3>🌎 Región</h3>
+    <p>LATAM</p>
+  </div>
+
+  <div class="info-box">
+    <h3>🏆 Enfoque</h3>
+    <p>Competitivo</p>
+  </div>
+
+</section>
+
+
+<section class="home-cta">
+  <h2>¿Querés competir con nosotros?</h2>
+  <p>Sumate a Tekin Esports y representá nuestros colores.</p>
+  <a href="contacto.html" class="btn-main">CONTACTANOS</a>
+</section>
+
+
+
+<footer class="footer">
+  © 2026 Tekin Esports | #GoTekin
+</footer>
+
+
+
+
+
+
+<script>
+  const transition = document.getElementById("logo-transition");
+  const links = document.querySelectorAll("a");
+
+  links.forEach(link => {
+    link.addEventListener("click", e => {
+      const href = link.getAttribute("href");
+
+      if (href && !href.startsWith("#")) {
+        e.preventDefault();
+        transition.classList.add("active");
+
+        setTimeout(() => {
+          window.location.href = href;
+        }, 600);
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
